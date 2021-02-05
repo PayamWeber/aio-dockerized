@@ -1,0 +1,11 @@
+version: "3.5"
+services: 
+  my_postgres:
+    container_name: my_postgres
+    image: postgres
+    environment: 
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: root
+    restart: unless-stopped
+    volumes: 
+    - ./data:/var/lib/postgresql/data

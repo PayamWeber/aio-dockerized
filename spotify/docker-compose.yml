@@ -1,7 +1,22 @@
 version: "3.5"
-services: 
-  spotify:
+services:
+#  my_snapcraft:
+#    container_name: my_snapcraft
+#    image: snapcraft:latest
+
+  my_spotify:
     container_name: my_spotify
     build: 
       context: ./
     working_dir: /
+    environment: 
+    - DISPLAY=unix$DISPLAY
+    volumes: 
+    - $HOME/.Xauthority:/root/.Xauthority:rw
+    - ./share/:/usr/share/spotify
+    tty: true
+    networks:
+    - my_spotify
+
+networks:
+  my_spotify:
