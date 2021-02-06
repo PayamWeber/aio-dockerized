@@ -3,3 +3,18 @@ services:
   my_nginx:
     container_name: my_nginx
     image: nginx
+    volumes: 
+    - ./etc/sites-available:/etc/nginx/sites-available
+    - ./etc/sites-enabled:/etc/nginx/sites-enabled
+    - ./var/www:/var/www
+    - ./var/log:/var/log/nginx
+    ports: 
+    - 8080:80
+    - 4433:443
+    networks:
+    - my_nginx
+    restart: unless-stopped
+    tty: true
+
+networks:
+  my_nginx:
