@@ -8,6 +8,7 @@ docker run -itd --cap-add NET_ADMIN \
 -p 1080:1080 \
 -e USER=${NORDVPN_USERNAME} \
 -e PASS=${NORDVPN_PASSWORD} \
+-e CONNECT=${NORDVPN_COUNTRY} \
 -e TECHNOLOGY=NordLynx \
 twitchax/nordvpn-proxy
 
