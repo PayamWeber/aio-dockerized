@@ -12,3 +12,10 @@ $BASEDIR/nginx/stop.sh
 ####
 cd $BASEDIR/postgres
 $BASEDIR/postgres/stop.sh
+
+
+####
+#### stop nordvpn
+####
+cd $BASEDIR/nordvpn-proxy
+$BASEDIR/nordvpn-proxy/stop.sh

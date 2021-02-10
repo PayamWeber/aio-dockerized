@@ -12,3 +12,10 @@ $BASEDIR/nginx/run.sh
 ####
 cd $BASEDIR/postgres
 $BASEDIR/postgres/run.sh
+
+
+####
+#### install and run nordvpn
+####
+cd $BASEDIR/nordvpn-proxy
+$BASEDIR/nordvpn-proxy/run.sh
